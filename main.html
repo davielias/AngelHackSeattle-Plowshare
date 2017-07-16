@@ -6,23 +6,41 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    <link rel="stylesheet" href="./css/fonts.css">
 
 </head>
 <body>
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="Plowshare.closeNav()">&times;</a>
     <div class="overlay-content">
-        <a onclick="Plowshare.chickpeaClick(event)">Chickpea</a>
-        <a onclick="Plowshare.sesameClick(event)">Sesame</a>
+        <a onclick="Plowshare.delete(event)" id="deleteButton">Remove Selected Crop</a>
     </div>
 </div>
 <div id="tabNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="Plowshare.closeNav()">&times;</a>
-    <ul class="overlay-content nav nav-tabs">
-        <li class="tabLinks col-xs-4 active" onclick="Plowshare.openFruits(event)"><a href="#">Fruits</a></li>
-        <li class="tabLinks col-xs-4" onclick="Plowshare.openVeggies(event)"><a href="#">Vegetables</a></li>
-        <li class="tabLinks col-xs-4" onclick="Plowshare.openHerbs(event)"><a href="#">Herbs</a></li>
-    </ul>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Vegetables</th>
+                    <th>Fruits</th>
+                    <th>Herbs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td onclick="Plowshare.chickpeaClick(event)">Chickpeas</td>
+                    <td>Dates</td>
+                    <td onclick="Plowshare.sesameClick(event)">Sesame</td>
+                </tr>
+            <tr>
+                <td>Peppers</td>
+                <td>Prickly Pear</td>
+                <td>Curry</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
     <script src="./js/main.js"></script>
 </body>

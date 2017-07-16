@@ -1,9 +1,11 @@
 h1 {
-    font-family: "Comic Sans MS";
     text-align: center;
     font-size: x-large;
 }
 
+body {
+    background-color: #518416;
+}
 .plotBox {
     width: 300px;
     height: 300px;
@@ -42,7 +44,7 @@ a.fill-div {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181 ;
+    color: #518416;
     display: block;
     transition: 0.3s;
 }
@@ -70,4 +72,21 @@ a.fill-div {
 .dirtPlot {
     background-image: url("../images/Tile Coloring.svg");
     background-size: cover;
+}
+
+.chickpeaImg {
+    background-image: url("../images/chickpea.jpg");
+    background-size: cover;
+}
+
+.sesameImg {
+    background-image: url("../images/sesame.jpg");
+    background-size: cover;
+}
+
+.plot {
+    width: 100%;
+    border: 5px solid white;
+    padding: 5%;
+    margin: 0;
 }
