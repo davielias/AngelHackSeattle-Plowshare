@@ -4,6 +4,7 @@
 var Plowshare ={};
 var lastSelected = null;
 Plowshare.plots = 9;
+Plowshare.planted = null;
 
 Plowshare.init = function () {
     Plowshare.welcomeFunc();
@@ -34,6 +35,7 @@ Plowshare.createPlots = function () {
         plotDivs.className += "col-sm-4 plotBox dirtPlot";
         plotDivs.id = i;
         plotDivs.addEventListener("click", Plowshare.navBox);
+        plotDivs.planted = false;
         mainCont.appendChild(plotDivs);
     }
 };
@@ -41,21 +43,30 @@ Plowshare.createPlots = function () {
 Plowshare.navBox = function (e) {
     console.log("Box id " + e.target.id + " was clicked");
     lastSelected = e.target;
-    document.getElementById("myNav").style.width = "100%";
+    console.log(document.getElementById(lastSelected.id).planted);
+    if (document.getElementById(lastSelected.id).planted == false){
+        document.getElementById("myNav").style.width = "100%";
+    }
+    else {
+        document.getElementById("tabNav").style.width = "100%";
+    }
 };
 
 Plowshare.closeNav = function () {
     document.getElementById("myNav").style.width = "0%";
+    document.getElementById("tabNav").style.width = "0%";
 };
 
 Plowshare.chickpeaClick = function (e) {
     Plowshare.closeNav();
     lastSelected.innerHTML = "chickpea";
+    document.getElementById(lastSelected.id).planted = true;
 };
 
 Plowshare.sesameClick = function (e) {
     Plowshare.closeNav();
     lastSelected.innerHTML = "sesame";
+    document.getElementById(lastSelected.id).planted = true;
 };
 
 Plowshare.init();

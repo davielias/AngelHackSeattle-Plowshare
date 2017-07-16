@@ -16,6 +16,14 @@
         <a onclick="Plowshare.sesameClick(event)">Sesame</a>
     </div>
 </div>
+<div id="tabNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="Plowshare.closeNav()">&times;</a>
+    <ul class="overlay-content nav nav-tabs">
+        <li class="tabLinks col-xs-4 active" onclick="Plowshare.openFruits(event)"><a href="#">Fruits</a></li>
+        <li class="tabLinks col-xs-4" onclick="Plowshare.openVeggies(event)"><a href="#">Vegetables</a></li>
+        <li class="tabLinks col-xs-4" onclick="Plowshare.openHerbs(event)"><a href="#">Herbs</a></li>
+    </ul>
+</div>
     <script src="./js/main.js"></script>
 </body>
 </html>
