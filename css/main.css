@@ -90,3 +90,7 @@ a.fill-div {
     padding: 5%;
     margin: 0;
 }
+
+td:hover {
+    cursor: pointer;
+}

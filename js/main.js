@@ -23,7 +23,7 @@ Plowshare.createPlots = function () {
     var mainCont = document.getElementById("mainCont");
     for (var i = 0; i < Plowshare.plots; i++) {
         var plotDivs = document.createElement("div");
-        plotDivs.className += "col-sm-4 plotBox dirtPlot";
+        plotDivs.className += "col-xs-4 plotBox dirtPlot";
         plotDivs.id = i;
         plotDivs.addEventListener("click", Plowshare.navBox);
         plotDivs.planted = false;
@@ -79,9 +79,9 @@ Plowshare.openHerbs = function (e) {
     setActive.className += " active";
 };
 Plowshare.addPlots = function (e) {
-    console.log("working to here")
-    var newPlot = document.createElement("div")
-    console.log(document.getElementById(lastSelected.id).planted)
+    console.log("working to here");
+    var newPlot = document.createElement("div");
+    console.log(document.getElementById(lastSelected.id).planted);
     if (document.getElementById(lastSelected.id).planted == false) {
     }
     else {
@@ -105,7 +105,7 @@ Plowshare.addPlots = function (e) {
     }
 };
 Plowshare.delete = function (e) {
-    lastSelected.className = "col-sm-4 plotBox dirtPlot";
+    lastSelected.className = "col-xs-4 plotBox dirtPlot";
     document.getElementById(lastSelected.id).planted = false;
     console.log(lastSelected.id);
     var parent = document.getElementById("myNav");
